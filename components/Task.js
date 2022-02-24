@@ -6,13 +6,13 @@ export default function Task({ task, updateTask, removeTask }) {
         <TouchableOpacity style={styles.wrapper} hitSlop={{ top: 20, bottom: 20, left: 50, right: 50 }} onPress={updateTask}>
             <View style={[styles.checkBox, task.isDone ? { backgroundColor: '#007DB6' } : { backgroundColor: 'white' }]}>
                 {task.isDone ?
-                    <Image style={{ width: 10, height: 10, tintColor: 'white' }} source={require('../assets/icon-check.png')}></Image>
+                    <Image style={styles.checkBoxIcon} source={require('../assets/icon-check.png')}></Image>
                     : null}
             </View>
 
             <Text style={styles.titleText}> {task.title}</Text>
             <TouchableOpacity onPress={removeTask}>
-                <Image style={{ width: 20, height: 20, tintColor: '#007DB6' }} source={require('../assets/icon-del.png')}></Image>
+                <Image style={styles.deleteIcon} source={require('../assets/icon-del.png')}></Image>
             </TouchableOpacity>
             {/* <View></View> */}
         </TouchableOpacity>
@@ -53,7 +53,19 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center'
 
+    },
+    checkBoxIcon: {
+        width: 10,
+        height: 10,
+        tintColor: 'white'
+    },
+    deleteIcon: {
+        width: 20,
+        height: 20,
+        tintColor: '#007DB6'
+
     }
+
 
 
 
