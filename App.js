@@ -83,7 +83,6 @@ const styles = StyleSheet.create({
 
   textInput: {
     borderRadius: 10,
-    elevation: 10,
     flex: 1,
     padding: 10
   },
@@ -92,14 +91,12 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
     margin: 10,
     borderRadius: 10,
-    elevation: 10,
     flexDirection: 'row'
   },
 
   addButton: {
     backgroundColor: '#007DB6',
     padding: 15,
-    elevation: 10,
     borderTopEndRadius: 10,
     borderBottomEndRadius: 10
 
